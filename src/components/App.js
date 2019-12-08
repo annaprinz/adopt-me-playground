@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div className="adobt-me">
         <div className="tag">
-          <Header />
+          <Header tagline="Adopt me - playground" />
         </div>
         <Order />
         <Inventory />

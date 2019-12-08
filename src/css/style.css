@@ -271,7 +271,7 @@ header.top {
   text-align: center;
 }
 header.top h1 {
-  font-size: 14.4rem;
+  font-size: 12.4rem;
   line-height: 0.7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -292,14 +292,15 @@ header.top h1 .ofThe {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: url("images/anchor.svg") center no-repeat;
+  background: url("images/dog-house.svg") center no-repeat;
   background-size: cover;
-  padding: 0 1rem;
+  padding: 0 3rem;
 }
 header.top h1 .ofThe .of {
   padding-right: 2rem;
   position: relative;
-  right: -0.5rem;
+  right: -1rem;
+  top: 0.3em;
 }
 header.top h3 {
   margin: 0;
@@ -356,7 +357,7 @@ header.top h3:after {
   transition: all 0.3s;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  overflow: scroll;
+  overflow: hidden;
 }
 .adobt-me > *:first-child {
   -ms-flex-negative: 1;
@@ -382,6 +383,7 @@ header.top h3:after {
     translateX(24px);
   transform: translateX(-50%) rotateY(10deg) translateX(50%) scale(1.08)
     translateX(24px);
+  overflow: hidden;
 }
 input#fold:not(:checked) ~ #main .adobt-me > * {
   -webkit-transform: none;
@@ -507,7 +509,7 @@ ul.order li span.count span {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
-.menu-dog {
+.tag-dog {
   border-bottom: 2px solid #000;
   border-top: 1px solid #000;
   padding-bottom: 2rem;
@@ -516,11 +518,11 @@ ul.order li span.count span {
   clear: both;
   overflow: hidden;
 }
-.menu-dog p {
+.tag-dog p {
   margin: 0;
   font-size: 1.8rem;
 }
-.menu-dog .dog-name {
+.tag-dog .dog-name {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,13 +534,13 @@ ul.order li span.count span {
   -ms-flex-align: center;
   align-items: center;
 }
-.menu-dog .price {
+.tag-dog .price {
   font-size: 1.4rem;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
-.menu-dog img {
+.tag-dog img {
   float: left;
   width: 150px;
   margin-right: 1rem;

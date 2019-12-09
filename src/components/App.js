@@ -12,9 +12,12 @@ class App extends React.Component {
 	};
 	componentDidMount() {
 		const { params } = this.props.match;
-
-		this.ref = base.syncState(`${params.storeId}/dogs`, { context: this, state: 'dogs' });
+		this.ref = base.syncState(`${params.storeId}/dogs`, {
+			context: this,
+			state: 'dogs'
+		});
 	}
+
 	addDog = (dog) => {
 		const dogs = { ...this.state.dogs };
 		dogs[`dog${Date.now()}`] = dog;

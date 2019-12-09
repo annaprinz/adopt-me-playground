@@ -18,6 +18,10 @@ class App extends React.Component {
 		});
 	}
 
+	componentWillUnmount() {
+		//clean up after store is mounted
+		base.removeBinding(this.ref);
+	}
 	addDog = (dog) => {
 		const dogs = { ...this.state.dogs };
 		dogs[`dog${Date.now()}`] = dog;

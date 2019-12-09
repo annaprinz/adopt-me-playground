@@ -20,13 +20,21 @@ class App extends React.Component {
 	loadSampleDogs = () => {
 		this.setState({ dogs: sampleDogs });
 	};
+
+	addToOrder = (key) => {
+		const order = { ...this.state.order };
+		order[key] = order[key] + 1 || 1;
+		this.setState({ order });
+	};
 	render() {
 		return (
 			<div className="adobt-me">
 				<div className="tag">
 					<Header tagline="Adopt me - playground" />
 					<ul className="dogs">
-						{Object.keys(this.state.dogs).map((key) => <Dog key={key} details={this.state.dogs[key]} />)}
+						{Object.keys(this.state.dogs).map((key) => (
+							<Dog key={key} index={key} details={this.state.dogs[key]} addToOrder={this.addToOrder} />
+						))}
 					</ul>
 				</div>
 				<Order />

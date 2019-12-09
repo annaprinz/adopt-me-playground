@@ -4,12 +4,24 @@ import Order from './Order';
 import Inventory from './Inventory';
 import sampleDogs from './../sample-dogs';
 import Dog from './Dog';
-
+import base from '../base';
 class App extends React.Component {
 	state = {
 		dogs: {},
 		order: {}
 	};
+	componentDidMount() {
+		const { params } = this.props.match;
+		this.ref = base.syncState(`${params.storeId}/dogs`, {
+			context: this,
+			state: 'dogs'
+		});
+	}
+
+	componentWillUnmount() {
+		//clean up after store is mounted
+		base.removeBinding(this.ref);
+	}
 	addDog = (dog) => {
 		const dogs = { ...this.state.dogs };
 		dogs[`dog${Date.now()}`] = dog;
@@ -26,6 +38,7 @@ class App extends React.Component {
 		order[key] = order[key] + 1 || 1;
 		this.setState({ order });
 	};
+
 	render() {
 		return (
 			<div className="adobt-me">

@@ -29,7 +29,7 @@ class AddDogForm extends React.Component {
 				<input name="race" ref={this.raceRef} type="text" placeholder="race" />
 				<select name="status" ref={this.statusRef}>
 					<option value="avaliable">Ready</option>
-					<option value="unavaliable">Sold!</option>
+					<option value="unavailable">Sold!</option>
 				</select>
 
 				<input name="image" ref={this.imageRef} type="text" placeholder="image" />

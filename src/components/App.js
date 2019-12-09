@@ -23,7 +23,7 @@ class App extends React.Component {
 		});
 	}
 	componentDidUpdate() {
-		console.log('it updated!!!');
+		//Yes...Localstorage will only work localy in browser...this is only for testing
 		const storeId = this.props.match.params.storeId;
 		localStorage.setItem(storeId, JSON.stringify(this.state.order));
 	}

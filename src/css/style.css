@@ -357,7 +357,7 @@ header.top h3:after {
   transition: all 0.3s;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow: scroll;
 }
 .adobt-me > *:first-child {
   -ms-flex-negative: 1;
@@ -373,6 +373,7 @@ header.top h3:after {
   border-left: 0;
   border-right: 0;
   min-width: 300px;
+  overflow: hidden;
 }
 .adobt-me > *:last-child {
   -ms-flex-negative: 1;

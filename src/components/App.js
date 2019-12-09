@@ -12,16 +12,27 @@ class App extends React.Component {
 	};
 	componentDidMount() {
 		const { params } = this.props.match;
+		//First reinstate our localstorage
+		const localStorageRef = localStorage.getItem(params.storeId);
+		if (localStorageRef) {
+			this.setState({ order: JSON.parse(localStorageRef) });
+		}
 		this.ref = base.syncState(`${params.storeId}/dogs`, {
 			context: this,
 			state: 'dogs'
 		});
+	}
+	componentDidUpdate() {
+		console.log('it updated!!!');
+		const storeId = this.props.match.params.storeId;
+		localStorage.setItem(storeId, JSON.stringify(this.state.order));
 	}
 
 	componentWillUnmount() {
 		//clean up after store is mounted
 		base.removeBinding(this.ref);
 	}
+
 	addDog = (dog) => {
 		const dogs = { ...this.state.dogs };
 		dogs[`dog${Date.now()}`] = dog;

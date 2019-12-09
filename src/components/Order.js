@@ -4,10 +4,14 @@ import { formatPrice } from './../helpers';
 class Order extends React.Component {
 	renderOrder = (key) => {
 		const dog = this.props.dogs[key];
+		//Make sure the dog is loaded before we continue
+		if (!dog) {
+			return null;
+		}
 		const count = this.props.order[key];
 		const isAvailable = dog && dog.status === 'available';
 		if (!isAvailable) {
-			return <li>Sorry {dog ? dog.name : 'dog'} is no longer available</li>;
+			return <li key={key}>Sorry {dog ? dog.name : 'dog'} is no longer available</li>;
 		}
 		return (
 			<li key={key}>
@@ -31,7 +35,7 @@ class Order extends React.Component {
 		return (
 			<div className="order-wrap">
 				<h2>Order</h2>
-				<ul>{orderIds.map(this.renderOrder)}</ul>
+				<ul className="order">{orderIds.map(this.renderOrder)}</ul>
 
 				<div className="total">
 					Total:

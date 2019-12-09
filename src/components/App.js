@@ -37,7 +37,8 @@ class App extends React.Component {
 						))}
 					</ul>
 				</div>
-				<Order />
+				{/*You could also pass it by using {..this.state}, but we should not pass the data except if we need it.*/}
+				<Order dogs={this.state.dogs} order={this.state.order} />
 				<Inventory addDog={this.addDog} loadSampleDogs={this.loadSampleDogs} />
 			</div>
 		);

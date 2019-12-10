@@ -1,4 +1,5 @@
 # React playground by Anna Prinz
+
 This is a demo for creating a simple reactjs site.
 
 Later it will be used as a playgorund to experiment with new/other tecnologies like:
@@ -8,5 +9,3 @@ Later it will be used as a playgorund to experiment with new/other tecnologies l
 3. etc.
 
 **NB** - 🐶🐕🐺 No dogs were harmed in the making of this code 🐶🐕🐺
-
-**Note** - This site does not exist to demonstrate my skills, but to experiment with new technologies and enhance my expertise.

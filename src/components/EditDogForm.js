@@ -54,7 +54,7 @@ class EditDogForm extends React.Component {
           onChange={this.handleChange}
           value={this.props.dog.status}
         >
-          <option value="avaliable">Ready</option>
+          <option value="available">Ready</option>
           <option value="unavailable">Sold!</option>
         </select>
         <textarea

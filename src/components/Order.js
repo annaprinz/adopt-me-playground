@@ -16,7 +16,7 @@ class Order extends React.Component {
       return null;
     }
     const count = this.props.order[key];
-    const isAvailable = dog && dog.status === "avaliable";
+    const isAvailable = dog && dog.status === "available";
     const transitionOptions = {
       classNames: "order",
       key,
@@ -59,7 +59,7 @@ class Order extends React.Component {
     const total = orderIds.reduce((prevTotal, key) => {
       const dog = this.props.dogs[key];
       const count = this.props.order[key];
-      const isAvailable = dog && dog.status === "avaliable";
+      const isAvailable = dog && dog.status === "available";
       if (isAvailable) {
         return prevTotal + count * dog.price;
       }

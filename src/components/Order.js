@@ -1,8 +1,14 @@
 import React from "react";
 import { formatPrice } from "./../helpers";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import PropTypes from "prop-types";
 
 class Order extends React.Component {
+  static propTypes = {
+    dogs: PropTypes.object,
+    order: PropTypes.object,
+    removeFromOrder: PropTypes.func
+  };
   renderOrder = key => {
     const dog = this.props.dogs[key];
     //Make sure the dog is loaded before we continue

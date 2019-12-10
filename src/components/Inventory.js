@@ -1,8 +1,16 @@
 import React from "react";
 import AddDogForm from "./AddDogForm";
 import EditDogForm from "./EditDogForm";
+import PropTypes from "prop-types";
 
 class Inventory extends React.Component {
+  static propTypes = {
+    dog: PropTypes.object,
+    updateDog: PropTypes.func,
+    deleteDog: PropTypes.func,
+    loadSampleDogs: PropTypes.func,
+    addDog: PropTypes.func
+  };
   render() {
     return (
       <div className="inventory">

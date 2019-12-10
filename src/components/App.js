@@ -5,11 +5,17 @@ import Inventory from "./Inventory";
 import sampleDogs from "./../sample-dogs";
 import Dog from "./Dog";
 import base from "../base";
+import PropTypes from "prop-types";
+
 class App extends React.Component {
   state = {
     dogs: {},
     order: {}
   };
+  static propTypes = {
+    match: PropTypes.object
+  };
+
   componentDidMount() {
     const { params } = this.props.match;
     //First reinstate our localstorage

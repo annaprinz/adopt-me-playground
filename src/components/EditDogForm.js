@@ -1,12 +1,29 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class EditDogForm extends React.Component {
+  static propTypes = {
+    dog: PropTypes.shape({
+      image: PropTypes.string,
+      name: PropTypes.string,
+      desc: PropTypes.string,
+      status: PropTypes.string,
+      price: PropTypes.number,
+      race: PropTypes.string
+    }),
+    index: PropTypes.string,
+    updateDog: PropTypes.func
+  };
   handleChange = event => {
     //update that dog:
     //Take a copy og the current dog
     const updatedDog = {
       ...this.props.dog,
-      [event.currentTarget.name]: event.currentTarget.value
+      //   [event.currentTarget.name]: event.currentTarget.value
+      [event.currentTarget.name]:
+        event.currentTarget.name === "price"
+          ? parseFloat(event.currentTarget.value)
+          : event.currentTarget.value
     };
     this.props.updateDog(this.props.index, updatedDog);
   };

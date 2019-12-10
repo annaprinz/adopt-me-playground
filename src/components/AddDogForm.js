@@ -1,5 +1,5 @@
 import React from "react";
-import { EventEmitter } from "events";
+import PropTypes from "prop-types";
 
 class AddDogForm extends React.Component {
   nameRef = React.createRef();
@@ -8,6 +8,9 @@ class AddDogForm extends React.Component {
   statusRef = React.createRef();
   imageRef = React.createRef();
   descRef = React.createRef();
+  static propTypes = {
+    addDog: PropTypes.func
+  };
 
   createDog = e => {
     e.preventDefault();

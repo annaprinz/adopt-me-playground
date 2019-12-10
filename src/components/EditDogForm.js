@@ -51,6 +51,9 @@ class EditDogForm extends React.Component {
           onChange={this.handleChange}
           value={this.props.dog.image}
         />
+        <button onClick={() => this.props.deleteDog(this.props.index)}>
+          Remove dog
+        </button>
       </div>
     );
   }

@@ -61,7 +61,16 @@ class App extends React.Component {
     //Set that to state
     this.setState({ dogs });
   };
-
+  deleteDog = key => {
+    const dogs = { ...this.state.dogs };
+    dogs[key] = null;
+    this.setState({ dogs });
+  };
+  removeFromOrder = key => {
+    const order = { ...this.state.order };
+    delete order[key];
+    this.setState({ order });
+  };
   render() {
     return (
       <div className="adobt-me">
@@ -79,10 +88,15 @@ class App extends React.Component {
           </ul>
         </div>
         {/*You could also pass it by using {..this.state}, but we should not pass the data except if we need it.*/}
-        <Order dogs={this.state.dogs} order={this.state.order} />
+        <Order
+          dogs={this.state.dogs}
+          order={this.state.order}
+          removeFromOrder={this.removeFromOrder}
+        />
         <Inventory
           addDog={this.addDog}
           updateDog={this.updateDog}
+          deleteDog={this.deleteDog}
           loadSampleDogs={this.loadSampleDogs}
           dogs={this.state.dogs}
         />

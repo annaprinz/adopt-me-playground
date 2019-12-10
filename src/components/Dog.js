@@ -1,8 +1,20 @@
 import React from "react";
 import AddDogForm from "./AddDogForm";
 import { formatPrice } from "./../helpers";
+import PropTypes from "prop-types";
 
 class Dog extends React.Component {
+  static propTypes = {
+    details: PropTypes.shape({
+      image: PropTypes.string,
+      name: PropTypes.string,
+      price: PropTypes.number,
+      race: PropTypes.string,
+      desc: PropTypes.string,
+      status: PropTypes.string
+    }),
+    addToOrder: PropTypes.func
+  };
   handleClick = () => {
     this.props.addToOrder(this.props.index);
   };
@@ -25,4 +37,5 @@ class Dog extends React.Component {
     );
   }
 }
+
 export default Dog;

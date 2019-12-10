@@ -291,7 +291,8 @@ header.top h1 .ofThe {
 header.top h1 .ofThe .of {
   padding-right: 2rem;
   position: relative;
-  right: -0.5rem;
+  right: -1.1rem;
+  top: 0.3em;
 }
 header.top h3 {
   margin: 0;

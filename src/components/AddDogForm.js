@@ -56,7 +56,7 @@ class AddDogForm extends React.Component {
           placeholder="desc"
         />
 
-        <button type="submit">+ Add Fish</button>
+        <button type="submit">+ Add Dog</button>
       </form>
     );
   }

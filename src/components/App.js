@@ -105,6 +105,7 @@ class App extends React.Component {
           deleteDog={this.deleteDog}
           loadSampleDogs={this.loadSampleDogs}
           dogs={this.state.dogs}
+          storeId={this.props.match.params.storeId}
         />
       </div>
     );

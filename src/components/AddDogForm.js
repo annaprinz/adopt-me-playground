@@ -39,7 +39,7 @@ class AddDogForm extends React.Component {
           placeholder="price"
         />
         <select name="status" ref={this.statusRef}>
-          <option value="avaliable">Ready</option>
+          <option value="available">Ready</option>
           <option value="unavailable">Sold!</option>
         </select>
 

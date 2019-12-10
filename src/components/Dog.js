@@ -20,7 +20,7 @@ class Dog extends React.Component {
   };
   render() {
     const { image, name, price, race, desc, status } = this.props.details;
-    const isAvailable = status === "avaliable";
+    const isAvailable = status === "available";
     return (
       <li className="tag-dog">
         <img src={image} alt={name} />

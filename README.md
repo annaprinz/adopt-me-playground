@@ -1,6 +1,6 @@
-# React playground by Anna Prinz
+# CRUD in ReactJS
 
-This is a demo for creating a simple reactjs site.
+This is a demo for creating a simple reactjs site, with firebase.
 
 Later it will be used as a playgorund to experiment with new/other tecnologies like:
 

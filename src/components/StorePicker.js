@@ -19,6 +19,7 @@ class StorePicker extends React.Component {
     return (
       <React.Fragment>
         <form className="store-selector" onSubmit={this.goToStore}>
+          {/* comments */}
           <h2>Please Enter A Store</h2>
           <input
             type="text"

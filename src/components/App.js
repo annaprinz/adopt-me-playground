@@ -51,7 +51,7 @@ class App extends React.Component {
   };
 
   addToOrder = key => {
-    //Take a copy of the existing state
+    //Take a copy of the existing state - you dont't want to modify it directly ( mutation)
     const order = { ...this.state.order };
     //Add our new dog to thath dogs variable
     order[key] = order[key] + 1 || 1;

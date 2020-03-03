@@ -9,3 +9,12 @@ Later it will be used as a playgorund to experiment with new/other tecnologies l
 3. etc.
 
 **NB** - 🐶🐕🐺 No dogs were harmed in the making of this code 🐶🐕🐺
+
+# Notes
+
+- Solution for returning siblings. Renders Nothing:
+
+<React.Fragment>
+
+Comments in jsx _ is star:
+{/_ comments \_/}
